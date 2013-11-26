@@ -1,16 +1,21 @@
 package javafxapplication.Controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafxapplication.Model.PostExample;
 import javafxapplication.Model.Seller;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -37,7 +42,15 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
 
+
         RestTemplate restTemplate = new RestTemplate();
+        List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
+
+//Add the Jackson Message converter
+        messageConverters.add(new MappingJacksonHttpMessageConverter());
+
+//Add the message converters to the restTemplate
+        restTemplate.setMessageConverters(messageConverters);
 
         String shopName, sellerName, login, password;
         shopName=text1.getText();
@@ -70,8 +83,9 @@ public class FXMLDocumentController implements Initializable {
     }
 
     private void Toluktoo() {
+
         RestTemplate restTemplate = new RestTemplate();
-        Seller[] sellers = restTemplate.getForObject("http://localhost:8080/sellers/", Seller[].class);
+        List<Seller> sellers = Arrays.asList(restTemplate.getForObject("http://localhost:8080/sellers/", Seller[].class));
         shopName.setCellValueFactory(new PropertyValueFactory<Seller, String>("shopname"));
         name.setCellValueFactory(new PropertyValueFactory<Seller, String>("fullName"));
         Login.setCellValueFactory(new PropertyValueFactory<Seller, String>("login"));

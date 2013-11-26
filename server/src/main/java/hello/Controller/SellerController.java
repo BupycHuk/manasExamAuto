@@ -34,11 +34,6 @@ public class SellerController {
         ShopRepository shopRepository = context.getBean(ShopRepository.class);
         Shop shop = shopRepository.findByName(postExample.getShopname());
 
-        Iterable<Seller> byLogin = getRepository().findByLogin(postExample.getLogin());
-        if (byLogin!=null && byLogin.iterator().hasNext())
-        {
-            throw new IllegalArgumentException("This login is exists");
-        }
         Seller seller= new Seller(postExample.getSellername(),postExample.getLogin(),postExample.getPassword());
         seller.setShop(shop);
         getRepository().save(seller);

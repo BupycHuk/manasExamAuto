@@ -10,7 +10,7 @@
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.FXMLDocumentController">
     <children>
-        <Button fx:id="button" layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0"
+        <Button layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0"
                 prefWidth="88.0" text="OK"/>
         <Label fx:id="label" layoutX="112.0" layoutY="14.0" minHeight="16.0" minWidth="69.0" text="Жаңы сатуучу кошуу"
                textFill="#00ff5b">
@@ -32,9 +32,9 @@
         <PasswordField fx:id="text4" layoutX="161.0" layoutY="171.0" prefHeight="27.0" prefWidth="200.0"
                        promptText="Пароль"/>
 
-        <Button fx:id="tazala" layoutX="161.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTazala"
+        <Button layoutX="161.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTazala"
                 prefHeight="27.0" prefWidth="88.0" text="Тазала"/>
-        <Button fx:id="tolukta" layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTolukta"
+        <Button layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTolukta"
                 prefHeight="27.0" prefWidth="88.0" text="Толукта"/>
         <TableView fx:id="tableView1" layoutX="22.0" layoutY="276.0" prefHeight="200.0" prefWidth="330.0">
             <columns>
