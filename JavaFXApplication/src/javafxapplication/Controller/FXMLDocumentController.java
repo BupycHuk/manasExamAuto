@@ -38,19 +38,10 @@ public class FXMLDocumentController implements Initializable {
     private TextField text3;
     @FXML
     private PasswordField text4;
-  
+
+    RestTemplate restTemplate = new RestTemplate();
     @FXML
     private void handleButtonAction(ActionEvent event) {
-
-
-        RestTemplate restTemplate = new RestTemplate();
-        List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
-
-//Add the Jackson Message converter
-        messageConverters.add(new MappingJacksonHttpMessageConverter());
-
-//Add the message converters to the restTemplate
-        restTemplate.setMessageConverters(messageConverters);
 
         String shopName, sellerName, login, password;
         shopName=text1.getText();
@@ -76,6 +67,15 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
+
+        List<HttpMessageConverter<?>> messageConverters = new ArrayList<HttpMessageConverter<?>>();
+
+//Add the Jackson Message converter
+        messageConverters.add(new MappingJacksonHttpMessageConverter());
+
+//Add the message converters to the restTemplate
+        restTemplate.setMessageConverters(messageConverters);
     }
 
     public void textTolukta(ActionEvent actionEvent) {
@@ -84,7 +84,6 @@ public class FXMLDocumentController implements Initializable {
 
     private void Toluktoo() {
 
-        RestTemplate restTemplate = new RestTemplate();
         List<Seller> sellers = Arrays.asList(restTemplate.getForObject("http://localhost:8080/sellers/", Seller[].class));
         shopName.setCellValueFactory(new PropertyValueFactory<Seller, String>("shopname"));
         name.setCellValueFactory(new PropertyValueFactory<Seller, String>("fullName"));
