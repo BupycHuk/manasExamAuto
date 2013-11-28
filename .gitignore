@@ -22,7 +22,7 @@ lib/
 
 # IntelliJ IDEA Files #
 
-# *.iml
+*.iml
 *.ipr
 *.iws
 *.idea
