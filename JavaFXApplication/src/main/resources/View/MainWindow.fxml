@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox id="AnchorPane" prefHeight="500.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.Controller.MainController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="Сатуучулар">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Сатуучу кошуу" onAction="#addSeller"/>
+                        <MenuItem mnemonicParsing="false" text="Сатуучулардын тизмеси" onAction="#listSeller"/>
+                    </items>
+                </Menu>
+                <Menu text="Menu2"/>
+
+            </menus>
+        </MenuBar>
+        <VBox fx:id="vbox">
+            <VBox.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+        </VBox>
+    </children>
+</VBox>

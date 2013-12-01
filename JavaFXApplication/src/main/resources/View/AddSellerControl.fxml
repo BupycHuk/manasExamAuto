@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.FXMLDocumentController">
+<AnchorPane prefHeight="500.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxapplication.Controller.Seller.AddSellerController">
     <children>
-        <Button layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0"
-                prefWidth="88.0" text="OK"/>
+        <Button layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="88.0"
+                text="OK"/>
         <Label fx:id="label" layoutX="112.0" layoutY="14.0" minHeight="16.0" minWidth="69.0" text="Жаңы сатуучу кошуу"
                textFill="#00ff5b">
             <font>
@@ -23,7 +22,6 @@
                 <Font size="14.0" fx:id="x1"/>
             </font>
         </Label>
-        <TextField fx:id="text1" layoutX="161.0" layoutY="54.0" prefHeight="27.0" prefWidth="200.0" text=""/>
         <Label font="$x1" layoutX="22.0" layoutY="99.0" text="Сатуучунун аты:" textFill="RED"/>
         <Label font="$x1" layoutX="22.0" layoutY="131.0" text="Логин:" textFill="RED"/>
         <Label font="$x1" layoutX="22.0" layoutY="171.0" text="Пароль:" textFill="RED"/>
@@ -32,16 +30,10 @@
         <PasswordField fx:id="text4" layoutX="161.0" layoutY="171.0" prefHeight="27.0" prefWidth="200.0"
                        promptText="Пароль"/>
 
-        <Button layoutX="161.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTazala"
-                prefHeight="27.0" prefWidth="88.0" text="Тазала"/>
-        <Button layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTolukta"
-                prefHeight="27.0" prefWidth="88.0" text="Толукта"/>
-        <TableView fx:id="tableView1" layoutX="22.0" layoutY="276.0" prefHeight="200.0" prefWidth="330.0">
-            <columns>
-                <TableColumn prefWidth="75.0" text="Дукондун аты" fx:id="shopName"/>
-                <TableColumn prefWidth="75.0" text="Сатуучунун аты" fx:id="name"/>
-                <TableColumn prefWidth="75.0" text="Логин" fx:id="Login"/>
-            </columns>
-        </TableView>
+        <Button layoutX="161.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTazala" prefHeight="27.0"
+                prefWidth="88.0" text="Тазала"/>
+        <ComboBox fx:id="shopComboBox" layoutX="161.0" layoutY="59.5" prefHeight="25.0" prefWidth="200.0" promptText="shopname"
+                  xmlns:fx="http://javafx.com/fxml">
+        </ComboBox>
     </children>
 </AnchorPane>

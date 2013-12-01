@@ -2,6 +2,7 @@ package hello.Controller;
 
 import hello.Config;
 import hello.Model.*;
+import hello.Model.RequestDto.AddSellerRequest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.stereotype.Component;
@@ -29,12 +30,12 @@ public class SellerController {
 
     @RequestMapping(value = "/addSeller",method = RequestMethod.POST)
     public @ResponseBody
-    Seller addSeller(@RequestBody PostExample postExample) {
+    Seller addSeller(@RequestBody AddSellerRequest addSellerRequest) {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         ShopRepository shopRepository = context.getBean(ShopRepository.class);
-        Shop shop = shopRepository.findByName(postExample.getShopname());
+        Shop shop = shopRepository.findOne(addSellerRequest.getShopId());
 
-        Seller seller= new Seller(postExample.getSellername(),postExample.getLogin(),postExample.getPassword());
+        Seller seller= new Seller(addSellerRequest.getSellername(),addSellerRequest.getLogin(),addSellerRequest.getPassword());
         seller.setShop(shop);
         getRepository().save(seller);
         return seller;
@@ -49,8 +50,7 @@ public class SellerController {
 
     public SellerRepository getRepository() {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        SellerRepository customerRepository = context.getBean(SellerRepository.class);
-        return customerRepository;
+        return context.getBean(SellerRepository.class);
     }
 }
 

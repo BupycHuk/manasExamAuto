@@ -12,16 +12,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URI;
+
 /**
  *
  * @author Akim
  */
 public class JavaFXApplication extends Application {
-    
+
+
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/View/FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/MainWindow.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -40,5 +43,4 @@ public class JavaFXApplication extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

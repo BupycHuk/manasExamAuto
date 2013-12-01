@@ -1,4 +1,4 @@
-package hello.Model;
+package javafxapplication.Model.RequestDto;
 
 import java.io.Serializable;
 
@@ -9,19 +9,32 @@ import java.io.Serializable;
  * Time: 13:36
  * To change this template use File | Settings | File Templates.
  */
-public class PostExample implements Serializable {
-    private String shopname;
+public class AddSellerRequest implements Serializable {
+    private long shopId;
     private String sellername;
     private String login;
     private String password;
 
-    public String getShopname() {
-        return shopname;
+    public AddSellerRequest()
+    {
+
     }
 
-    public void setShopname(String shopname)
+    public AddSellerRequest(long shopId, String sellername, String login, String password) {
+        //To change body of created methods use File | Settings | File Templates.
+        this.shopId = shopId;
+        this.sellername = sellername;
+        this.login = login;
+        this.password = password;
+    }
+
+    public long getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(long shopId)
     {
-        this.shopname=shopname;
+        this.shopId =shopId;
     }
 
     public String getSellername() {
@@ -51,4 +64,5 @@ public class PostExample implements Serializable {
     {
         this.password = password;
     }
+
 }
