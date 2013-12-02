@@ -27,13 +27,13 @@ public class ListSellerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        shopName.setCellValueFactory(new PropertyValueFactory<Seller, String>("shopname"));
+        name.setCellValueFactory(new PropertyValueFactory<Seller, String>("fullName"));
+        Login.setCellValueFactory(new PropertyValueFactory<Seller, String>("login"));
     }
 
     public void textTolukta(ActionEvent actionEvent) {
         List<Seller> sellers = Arrays.asList(sellerProxy.getSellers());
-        shopName.setCellValueFactory(new PropertyValueFactory<Seller, String>("shopname"));
-        name.setCellValueFactory(new PropertyValueFactory<Seller, String>("fullName"));
-        Login.setCellValueFactory(new PropertyValueFactory<Seller, String>("login"));
 
         tableView1.getItems().setAll(sellers);
     }

@@ -28,10 +28,10 @@ public class MainController implements Initializable {
     }
 
     private void openControl(String controlPath) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(controlPath));
+        Parent control = FXMLLoader.load(getClass().getResource(controlPath));
 
         vbox.getChildren().clear();
-        vbox.getChildren().add(root);
+        vbox.getChildren().add(control);
     }
 
     public void listSeller(ActionEvent actionEvent) throws IOException {

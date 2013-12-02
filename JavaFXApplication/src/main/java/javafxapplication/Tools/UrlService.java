@@ -8,9 +8,9 @@ package javafxapplication.Tools;
  * To change this template use File | Settings | File Templates.
  */
 public class UrlService {
-    private static String URL="http://localhost:8080";
+    private static String URL="http://localhost:9000";
 
-    public String GetServerUrl(String s) {
-        return URL + s;
+    public String GetServerUrl(String path) {
+        return URL + path;
     }
 }

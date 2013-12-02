@@ -9,9 +9,7 @@
 <AnchorPane prefHeight="500.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="javafxapplication.Controller.Seller.AddSellerController">
     <children>
-        <Button layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="88.0"
-                text="OK"/>
-        <Label fx:id="label" layoutX="112.0" layoutY="14.0" minHeight="16.0" minWidth="69.0" text="Жаңы сатуучу кошуу"
+        <Label layoutX="112.0" layoutY="14.0" minHeight="16.0" minWidth="69.0" text="Жаңы сатуучу кошуу"
                textFill="#00ff5b">
             <font>
                 <Font size="20.0"/>
@@ -32,7 +30,9 @@
 
         <Button layoutX="161.0" layoutY="217.0" mnemonicParsing="false" onAction="#textTazala" prefHeight="27.0"
                 prefWidth="88.0" text="Тазала"/>
-        <ComboBox fx:id="shopComboBox" layoutX="161.0" layoutY="59.5" prefHeight="25.0" prefWidth="200.0" promptText="shopname"
+        <Button layoutX="273.0" layoutY="217.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="88.0"
+                text="OK"/>
+        <ComboBox fx:id="shopComboBox" layoutX="161.0" layoutY="59.5" prefHeight="25.0" prefWidth="200.0" promptText="дукондун аты"
                   xmlns:fx="http://javafx.com/fxml">
         </ComboBox>
     </children>
