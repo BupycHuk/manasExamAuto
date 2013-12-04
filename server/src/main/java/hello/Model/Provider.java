@@ -3,16 +3,22 @@ package hello.Model;
 import javax.persistence.*;
 
 @Entity
-public class Shop
-{
+public class Provider {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column(name="name")
     private String name;
-
     @Column(name="contacts")
     private String contacts;
+
+    protected Provider() {}
+
+    public Provider(String firstName, String lastName) {
+        this.name = firstName;
+        this.contacts = lastName;
+    }
+
 
     public String getName() {
         return name;
@@ -22,10 +28,6 @@ public class Shop
         this.name = name;
     }
 
-    public long getId() {
-        return id;
-    }
-
     public String getContacts() {
         return contacts;
     }
@@ -33,4 +35,9 @@ public class Shop
     public void setContacts(String contacts) {
         this.contacts = contacts;
     }
+
+    public long getId() {
+        return id;
+    }
 }
+
