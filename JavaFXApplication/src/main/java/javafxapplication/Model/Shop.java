@@ -4,6 +4,7 @@ public class Shop
 {
     private long id;
     private String name;
+    private String contacts;
 
     public String getName() {
         return name;
@@ -21,5 +22,13 @@ public class Shop
     {
         return getId()+" - "+getName();
 
+    }
+
+    public String getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(String contacts) {
+        this.contacts = contacts;
     }
 }
