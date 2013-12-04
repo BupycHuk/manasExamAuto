@@ -11,6 +11,9 @@ public class Shop
     @Column(name="name")
     private String name;
 
+    @Column(name="contacts")
+    private String contacts;
+
     public String getName() {
         return name;
     }
@@ -21,5 +24,13 @@ public class Shop
 
     public long getId() {
         return id;
+    }
+
+    public String getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(String contacts) {
+        this.contacts = contacts;
     }
 }

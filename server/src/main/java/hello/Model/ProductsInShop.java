@@ -7,14 +7,12 @@ public class ProductsInShop {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name="shop")
-    private String shop;
     @Column(name="count")
     private Integer count;
 
     protected ProductsInShop() {}
 
-    public ProductsInShop(String shop, Integer count) {
+    public ProductsInShop(Shop shop, Integer count) {
         this.shop = shop;
         this.count=count;
     }
@@ -31,24 +29,28 @@ public class ProductsInShop {
         return count;
     }
 
-    public void setShop(String shop) {
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "shop")
+    private Shop shop;
+
+    public void setShop(Shop shop) {
         this.shop = shop;
     }
 
-    public String getShop() {
+    public Shop getShop() {
         return shop;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "providerName")
+    @JoinColumn(name = "provider")
     private Provider provider;
 
     public Provider getName(){
         return provider;
     }
 
-    public void setName(Provider name){
-        this.provider=name;
+    public void setName(Provider provider){
+        this.provider=provider;
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -62,6 +64,7 @@ public class ProductsInShop {
     public Product getProduct() {
         return product;
     }
+
 
 }
 
