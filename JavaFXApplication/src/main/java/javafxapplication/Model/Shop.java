@@ -1,7 +1,6 @@
-
 package javafxapplication.Model;
-public class Shop
-{
+public class Shop{
+
     private long id;
     private String name;
     private String contacts;
