@@ -14,7 +14,7 @@ public class Shop
     @Column(name="contacts")
     private String contacts;
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 

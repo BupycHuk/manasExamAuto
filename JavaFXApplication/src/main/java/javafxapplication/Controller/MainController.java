@@ -20,7 +20,6 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public void addSeller(ActionEvent actionEvent) throws IOException {
@@ -36,5 +35,9 @@ public class MainController implements Initializable {
 
     public void listSeller(ActionEvent actionEvent) throws IOException {
         openControl("/View/ListSellerControl.fxml");
+    }
+
+    public void listSoldProducts(ActionEvent actionEvent) throws IOException {
+         openControl("/View/ListSoldProductControl.fxml");
     }
 }

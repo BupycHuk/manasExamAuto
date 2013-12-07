@@ -11,11 +11,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-
-/**
- *
- * @author Akim
- */
 public class ListSellerController implements Initializable {
 
     public TableColumn shopName;
@@ -36,5 +31,7 @@ public class ListSellerController implements Initializable {
         List<Seller> sellers = Arrays.asList(sellerProxy.getSellers());
 
         tableView1.getItems().setAll(sellers);
+
     }
+
 }
