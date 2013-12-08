@@ -36,8 +36,6 @@ public class TreeViewController implements Initializable {
     SellerProxy sellerProxy = new SellerProxy();
     ShopProxy shopProxy = new ShopProxy();
 
-
-    
      public void clickMe(ActionEvent event) {
        
        TreeItem<String> root = new TreeItem("Дукондордун тизмеси");
@@ -57,8 +55,6 @@ public class TreeViewController implements Initializable {
            }
        }
 
-       
-       
        TreeView treeView = new TreeView(root);
        
        treeView.setLayoutX(24);
@@ -69,7 +65,6 @@ public class TreeViewController implements Initializable {
        
        anchorPane.getChildren().add(treeView);
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
