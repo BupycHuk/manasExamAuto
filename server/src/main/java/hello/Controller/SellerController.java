@@ -2,6 +2,8 @@ package hello.Controller;
 
 import hello.Config;
 import hello.Model.*;
+import hello.Model.Repository.SellerRepository;
+import hello.Model.Repository.ShopRepository;
 import hello.Model.RequestDto.AddSellerRequest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
