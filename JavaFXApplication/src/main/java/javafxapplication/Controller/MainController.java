@@ -34,11 +34,8 @@ public class MainController implements Initializable {
         vbox.getChildren().add(control);
     }
 
-   // public void listSeller(ActionEvent actionEvent) throws IOException {
-      //  openControl("/View/ListSellerControl.fxml");
-    //}
-
     public void listSeller(ActionEvent actionEvent) throws IOException {
-        openControl("/View/TreeView.fxml");
+       openControl("/View/ListSellerControl.fxml");
     }
+
 }
