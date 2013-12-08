@@ -18,11 +18,7 @@ public class Shop
         return id;
     }
 
-    public String toString()
-    {
-        return getId()+" - "+getName();
 
-    }
 
     public String getContacts() {
         return contacts;
@@ -30,5 +26,11 @@ public class Shop
 
     public void setContacts(String contacts) {
         this.contacts = contacts;
+    }
+
+    public String toString()
+    {
+        return getId()+" - "+getName()+" - " + getContacts();
+
     }
 }
