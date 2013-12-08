@@ -3,8 +3,7 @@ package hello.Model;
 import javax.persistence.*;
 
 @Entity
-public class Product
-{
+public class Product {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
@@ -13,7 +12,12 @@ public class Product
     @Column(name="price")
     private Double price;
 
+    protected Product() {}
 
+    public Product(String nameProduct, Double price) {
+        this.nameProduct = nameProduct;
+        this.price = price;
+    }
     public long getId() {
         return id;
     }
@@ -32,5 +36,18 @@ public class Product
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "shop")
+    private Shop shop;
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
     }
 }
