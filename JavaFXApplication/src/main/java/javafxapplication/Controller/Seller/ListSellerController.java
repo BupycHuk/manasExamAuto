@@ -1,8 +1,9 @@
 package javafxapplication.Controller.Seller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafxapplication.Model.Seller;
 import javafxapplication.Proxy.SellerProxy;
@@ -31,7 +32,5 @@ public class ListSellerController implements Initializable {
         List<Seller> sellers = Arrays.asList(sellerProxy.getSellers());
 
         tableView1.getItems().setAll(sellers);
-
     }
-
 }

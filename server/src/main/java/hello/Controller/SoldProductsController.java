@@ -17,8 +17,8 @@ public class SoldProductsController {
 
     @RequestMapping(value = "/soldproducts/{Name}")
     public @ResponseBody
-    Iterable<SoldProducts> listsoldProducts(@PathVariable("Name") String name) {   // бул жерде да id
-        return  getRepository().findByName(name);
+    Iterable<SoldProducts> listsoldProducts(@PathVariable("Name") String Name) {   // бул жерде да id
+        return  getRepository().findByName(Name);
     }
 
     public SoldProductsRepository getRepository() {

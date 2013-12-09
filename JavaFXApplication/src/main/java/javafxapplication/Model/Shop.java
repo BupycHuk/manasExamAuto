@@ -30,4 +30,8 @@ public class Shop{
     public void setContacts(String contacts) {
         this.contacts = contacts;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

@@ -1,12 +1,12 @@
 package javafxapplication.Controller.SoldProduct;
 
-import hello.Model.Shop;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafxapplication.Model.Shop;
 import javafxapplication.Model.SoldProducts;
 import javafxapplication.Proxy.ShopProxy;
 import javafxapplication.Proxy.SoldProductsProxy;
@@ -28,7 +28,7 @@ public class ListSoldProductsController implements Initializable {
     ShopProxy shopProxy = new ShopProxy();
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        javafxapplication.Model.Shop[] shops = shopProxy.getShops();
+        Shop[] shops = shopProxy.getShops();
         shopComboBox.getItems().setAll(shops);
 
         count.setCellValueFactory(new PropertyValueFactory<SoldProducts, Integer>("count"));
@@ -39,10 +39,9 @@ public class ListSoldProductsController implements Initializable {
     }
 
     public void textToluktoo(ActionEvent actionEvent) {
-        Shop shopName = (Shop) shopComboBox.getValue();
-        String name = String.format("%s",shopName.getName());
-
-        List<SoldProducts> soldProductses = Arrays.asList(soldProductsProxy.getSoldProducts(name));
+        Shop shop = (Shop) shopComboBox.getValue();
+        String Name = shop.getName();
+        List<SoldProducts> soldProductses = Arrays.asList(soldProductsProxy.getSoldProducts(Name));
         tableView1.getItems().setAll(soldProductses);
 
     }
