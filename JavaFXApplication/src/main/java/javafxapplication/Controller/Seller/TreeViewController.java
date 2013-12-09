@@ -55,16 +55,19 @@ public class TreeViewController implements Initializable {
            }
        }
 
+       
+       
        TreeView treeView = new TreeView(root);
        
-       treeView.setLayoutX(24);
+       treeView.setLayoutX(13);
        
-       treeView.setLayoutY(73);
+       treeView.setLayoutY(50);
        treeView.setPrefWidth(340);
-       treeView.setPrefHeight(382);
+       treeView.setPrefHeight(390);
        
        anchorPane.getChildren().add(treeView);
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
