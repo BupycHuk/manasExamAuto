@@ -4,6 +4,8 @@ public class Shop
 {
     private long id;
     private String name;
+    private String shopName;
+    private long shopId;
     private String contacts;
 
     public String getName() {
@@ -30,5 +32,21 @@ public class Shop
 
     public void setContacts(String contacts) {
         this.contacts = contacts;
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
+
+    public long getShopId() {
+        return shopId;
+    }
+
+    public void setShopId(long shopId) {
+        this.shopId = shopId;
     }
 }

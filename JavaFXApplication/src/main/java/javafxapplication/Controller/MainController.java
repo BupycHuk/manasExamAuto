@@ -10,10 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- *
- * @author Akim
- */
+
 public class MainController implements Initializable {
 
     public VBox vbox;
@@ -26,6 +23,16 @@ public class MainController implements Initializable {
     public void addSeller(ActionEvent actionEvent) throws IOException {
         openControl("/View/AddSellerControl.fxml");
     }
+    public void addShop(ActionEvent actionEvent) throws IOException {
+        openControl("/View/AddShopControl.fxml");
+
+    }
+    public void listSeller(ActionEvent actionEvent) throws IOException {
+        openControl("/View/ListSellerControl.fxml");
+    }
+    public void listShop(ActionEvent actionEvent) throws IOException {
+        openControl("/View/ListShopControl.fxml");
+    }
 
     private void openControl(String controlPath) throws IOException {
         Parent control = FXMLLoader.load(getClass().getResource(controlPath));
@@ -34,7 +41,9 @@ public class MainController implements Initializable {
         vbox.getChildren().add(control);
     }
 
-    public void listSeller(ActionEvent actionEvent) throws IOException {
-        openControl("/View/ListSellerControl.fxml");
+
     }
-}
+
+
+
+

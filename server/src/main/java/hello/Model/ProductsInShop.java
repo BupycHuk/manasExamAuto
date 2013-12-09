@@ -1,5 +1,8 @@
 package hello.Model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 
 @Entity
@@ -30,6 +33,7 @@ public class ProductsInShop {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "shop")
     private Shop shop;
 

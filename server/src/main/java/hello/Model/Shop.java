@@ -13,6 +13,15 @@ public class Shop
 
     @Column(name="contacts")
     private String contacts;
+    public Shop(){}
+
+    public Shop(String shopName, String contacts)
+    {
+        this.name=shopName;
+        this.contacts=contacts;
+
+    }
+
 
     public String getName() {
         return name;

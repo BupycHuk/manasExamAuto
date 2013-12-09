@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
-<VBox id="AnchorPane" prefHeight="500.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.Controller.MainController">
-    <children>
-        <MenuBar>
-            <menus>
-                <Menu text="Сатуучулар">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Сатуучу кошуу" onAction="#addSeller"/>
-                        <MenuItem mnemonicParsing="false" text="Сатуучулардын тизмеси" onAction="#listSeller"/>
-                    </items>
-                </Menu>
-                <Menu text="Menu2"/>
-
-            </menus>
-        </MenuBar>
-        <VBox fx:id="vbox">
-            <VBox.margin>
-                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-            </VBox.margin>
-        </VBox>
-    </children>
+<VBox id="AnchorPane" prefHeight="500.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.MainController">
+  <children>
+    <MenuBar>
+      <menus>
+        <Menu text="Сатуучулар">
+          <MenuItem mnemonicParsing="false" onAction="#addSeller" text="Сатуучу кошуу" />
+          <MenuItem mnemonicParsing="false" onAction="#listSeller" text="Сатуучулардын тизмеси" />
+        </Menu>
+        <Menu text="Дукон">
+          <MenuItem mnemonicParsing="false" onAction="#addShop" text="Дукон кошуу" />
+          <MenuItem mnemonicParsing="false" onAction="#listShop" text="Дукондордун тизмеси" />
+        </Menu>
+      </menus>
+    </MenuBar>
+    <VBox fx:id="vbox">
+      <VBox.margin>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </VBox.margin>
+    </VBox>
+  </children>
 </VBox>

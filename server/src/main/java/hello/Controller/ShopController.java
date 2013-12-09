@@ -2,6 +2,8 @@ package hello.Controller;
 
 import hello.Config;
 import hello.Model.*;
+import hello.Model.RequestDto.AddSellerRequest;
+import hello.Model.RequestDto.AddShopRequest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.stereotype.Component;
@@ -22,9 +24,23 @@ public class ShopController {
 
     @RequestMapping(value = "/shops")
     public @ResponseBody
-    Iterable<Shop> listSellers() {
+    Iterable<Shop> listShops() {
 
         return  getRepository().findAll();
+
+    }
+//    @RequestMapping(value = "/addShop/{name}/{contacts}")
+//    public @ResponseBody
+//    boolean addShop(@PathVariable("name") String name, @PathVariable ("contacts") String contacts )
+//    {
+//
+//    }
+    @RequestMapping(value = "/shops/delete/{id}")
+    public @ResponseBody
+    boolean deleteShop(@PathVariable("id") long id) {
+
+        getRepository().delete(id);
+        return true;
     }
 
     public ShopRepository getRepository() {
