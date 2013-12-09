@@ -1,21 +1,21 @@
-package hello.Model;
+package hello.Model.RequestDto;
 
-import javax.persistence.*;
+import java.io.Serializable;
+/**
+ * Created with IntelliJ IDEA.
+ * User: Администратор
+ * Date: 09.12.13
+ * Time: 15:13
+ * To change this template use File | Settings | File Templates.
+ */
+public class AddShopRequest implements Serializable{
 
-@Entity
-public class Shop
-{
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
-    @Column(name="name")
     private String name;
-
-    @Column(name="contacts")
     private String contacts;
-    protected Shop() {}
+    protected AddShopRequest() {}
 
-    public Shop(String name, String contacts) {
+    public AddShopRequest(String name, String contacts) {
         this.name = name;
         this.contacts = contacts;
     }

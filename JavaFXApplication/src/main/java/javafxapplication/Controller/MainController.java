@@ -26,6 +26,12 @@ public class MainController implements Initializable {
     public void addSeller(ActionEvent actionEvent) throws IOException {
         openControl("/View/AddSellerControl.fxml");
     }
+    public void addShop(ActionEvent actionEvent) throws IOException {
+        openControl("/View/AddShopControl.fxml");
+    }
+    public void listShop(ActionEvent actionEvent) throws IOException {
+        openControl("/View/ListShopControl.fxml");
+    }
 
     private void openControl(String controlPath) throws IOException {
         Parent control = FXMLLoader.load(getClass().getResource(controlPath));
