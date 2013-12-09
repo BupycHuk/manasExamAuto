@@ -33,4 +33,5 @@ public class Shop
     public void setContacts(String contacts) {
         this.contacts = contacts;
     }
+
 }

@@ -19,7 +19,7 @@ public class Shop{
 
     public String toString()
     {
-        return getId()+" - "+getName();
+        return getName();
 
     }
 

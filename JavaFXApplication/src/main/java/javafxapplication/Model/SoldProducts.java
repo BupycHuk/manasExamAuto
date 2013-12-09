@@ -14,6 +14,14 @@ public class SoldProducts {
 
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public void setCount(Integer count) {
         this.count = count;
     }
@@ -29,6 +37,7 @@ public class SoldProducts {
     public Double getPrice() {
         return price;
     }
+
     private Seller seller;
 
     public void setSeller(Seller seller) {
@@ -37,6 +46,11 @@ public class SoldProducts {
 
     public Seller getSeller() {
         return seller;
+    }
+    public String getFullName(){
+        if (getSeller()!=null)
+            return  getSeller().getFullName();
+        return null;
     }
 
     private Product product;
@@ -55,12 +69,5 @@ public class SoldProducts {
         return null;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 }
 
