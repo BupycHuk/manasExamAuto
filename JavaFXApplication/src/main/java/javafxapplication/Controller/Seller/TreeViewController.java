@@ -27,12 +27,7 @@ public class TreeViewController implements Initializable {
     
     @FXML
     public AnchorPane anchorPane;
-    
-    public TableColumn shopName;
-    public TableColumn name;
-    public TableColumn Login;
-    public TableView tableView1;
-
+   
     SellerProxy sellerProxy = new SellerProxy();
     ShopProxy shopProxy = new ShopProxy();
 
@@ -54,13 +49,10 @@ public class TreeViewController implements Initializable {
                     node.getChildren().add(nod);
            }
        }
-
-       
        
        TreeView treeView = new TreeView(root);
        
        treeView.setLayoutX(13);
-       
        treeView.setLayoutY(50);
        treeView.setPrefWidth(340);
        treeView.setPrefHeight(390);
