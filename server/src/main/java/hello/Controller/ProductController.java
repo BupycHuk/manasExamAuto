@@ -35,11 +35,11 @@ public class ProductController {
         return product;
     }
 
-    @RequestMapping(value = "/delete/{productName}")
+    @RequestMapping(value = "/delete/product/{id}")
     public @ResponseBody
-    boolean deleteProduct(@PathVariable("productName") String productName) {
-        Product product = getRepository().findByNameProduct(productName);
-        getRepository().delete(product);
+    boolean deleteProduct(@PathVariable("id") long id) {
+
+        getRepository().delete(id);
         return true;
     }
 

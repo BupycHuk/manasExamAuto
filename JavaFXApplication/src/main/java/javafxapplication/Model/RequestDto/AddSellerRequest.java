@@ -64,5 +64,4 @@ public class AddSellerRequest implements Serializable {
     {
         this.password = password;
     }
-
 }

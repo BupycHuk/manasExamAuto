@@ -1,6 +1,7 @@
-package hello.Model.RequestDto;
+package javafxapplication.Model.RequestDto;
 
 import java.io.Serializable;
+
 /**
  * Created by Aza on 08.12.13.
  */

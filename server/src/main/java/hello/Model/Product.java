@@ -10,11 +10,11 @@ public class Product {
     @Column(name="nameProduct")
     private String nameProduct;
     @Column(name="price")
-    private Double price;
+    private String price;
 
     protected Product() {}
 
-    public Product(String nameProduct, Double price) {
+    public Product(String nameProduct, String price) {
         this.nameProduct = nameProduct;
         this.price = price;
     }
@@ -22,19 +22,19 @@ public class Product {
         return id;
     }
 
-    public String getName() {
+    public String getNameProduct() {
         return nameProduct;
     }
 
-    public void setName(String name) {
+    public void setNameProduct(String name) {
         this.nameProduct = name;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
