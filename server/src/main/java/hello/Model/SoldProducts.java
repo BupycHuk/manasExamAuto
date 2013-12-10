@@ -7,9 +7,9 @@ public class SoldProducts {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    protected long id;
     @Column(name="count")
-    private Integer count;
+    private int count;
     @Column(name="price")
     private Double price;
 
@@ -25,11 +25,11 @@ public class SoldProducts {
         return id;
     }
 
-    public void setCount(Integer count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
-    public Integer getCount() {
+    public int getCount() {
         return count;
     }
 
