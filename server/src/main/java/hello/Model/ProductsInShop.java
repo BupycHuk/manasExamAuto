@@ -33,7 +33,7 @@ public class ProductsInShop {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @OnDelete(action = OnDeleteAction.CASCADE)
+
     @JoinColumn(name = "shop")
     private Shop shop;
 

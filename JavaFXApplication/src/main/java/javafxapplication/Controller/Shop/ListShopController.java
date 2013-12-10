@@ -23,11 +23,11 @@ import java.util.ResourceBundle;
  */
 public class ListShopController implements Initializable {
 
-    public TableColumn id;
-    public TableColumn name;
-    public TableColumn contacts;
+    public TableColumn<Shop, Long> id;
+    public TableColumn<Shop, String> name;
+    public TableColumn<Shop, String> contacts;
 
-    public TableView tableView1;
+    public TableView<Shop> tableView1;
 
     ShopProxy shopProxy = new ShopProxy();
 
@@ -49,9 +49,10 @@ public class ListShopController implements Initializable {
     {
 
 
-         Shop shop =  (Shop) tableView1.getSelectionModel().getSelectedItem();
+         Shop shop = tableView1.getSelectionModel().getSelectedItem();
          long i=shop.getId();
          shopProxy.deleteShops(i);
+
 
 
     }

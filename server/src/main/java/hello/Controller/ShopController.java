@@ -29,12 +29,7 @@ public class ShopController {
         return  getRepository().findAll();
 
     }
-//    @RequestMapping(value = "/addShop/{name}/{contacts}")
-//    public @ResponseBody
-//    boolean addShop(@PathVariable("name") String name, @PathVariable ("contacts") String contacts )
-//    {
-//
-//    }
+
     @RequestMapping(value = "/shops/delete/{id}")
     public @ResponseBody
     boolean deleteShop(@PathVariable("id") long id) {
