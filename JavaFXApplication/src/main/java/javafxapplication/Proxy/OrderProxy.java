@@ -17,7 +17,7 @@ public class OrderProxy extends Proxy{
     public boolean addOrderedProduct(AddOrderRequest orderAddRequest)
     {
         try {
-            restTemplate.postForObject(urlService.GetServerUrl("/addProduct/"), orderAddRequest, OrderedProducts.class);
+            restTemplate.postForObject(urlService.GetServerUrl("/addOrder/"), orderAddRequest, OrderedProducts.class);
         }
         catch (Exception e)
         {

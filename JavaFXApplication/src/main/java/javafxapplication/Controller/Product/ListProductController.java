@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafxapplication.Model.OrderedProducts;
 import javafxapplication.Model.Product;
+import javafxapplication.Model.Seller;
 import javafxapplication.Proxy.OrderProxy;
 import javafxapplication.Proxy.ProductProxy;
 import javafxapplication.Model.RequestDto.AddOrderRequest;
@@ -53,15 +54,11 @@ public class ListProductController implements Initializable {
     }
     public void orderProduct(ActionEvent actionEvent) {
 
-        OrderedProducts order =  (OrderedProducts) tableView1.getSelectionModel().getSelectedItem();
-
-//      String orderedProduct = order.getOrderedProduct();
-//      orderProxy.productOrder(orderedProduct);
-//      Seller seller = order.getSeller();
+        Product product = (Product) tableView1.getSelectionModel().getSelectedItem();
         String orderedProduct, price;
-//      long sellerId = (seller!=null)?(long)seller.getId() :0;
-        orderedProduct = order.getOrderedProduct();
-        price = order.getPrice();
+//        long sellerId = (seller!=null)?(long)seller.getId() :0;
+        orderedProduct = product.getNameProduct();
+        price = product.getPrice();
         AddOrderRequest request = new AddOrderRequest(orderedProduct, price);
 
         orderProxy.addOrderedProduct(request);
