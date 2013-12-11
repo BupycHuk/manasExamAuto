@@ -17,30 +17,32 @@ public class OrderController {
 
     @RequestMapping(value = "/orders")
     public @ResponseBody
-    Iterable<Order> listOrders() {
+    Iterable<OrderedProducts> listOrders() {
 
         return  getRepository().findAll();
     }
 
-//    @RequestMapping(value = "/addOrder/{id}",method = RequestMethod.POST)
-//    public @ResponseBody
-//    Order addOrder(@RequestBody AddOrderRequest addOrderRequest) {
-//        AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+    @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
+    public @ResponseBody
+    OrderedProducts addOrder(@RequestBody AddOrderRequest addOrderRequest) {
+        AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 //        SellerRepository sellerRepository = context.getBean(SellerRepository.class);
 //        Seller seller = sellerRepository.findOne(addOrderRequest.getSellerId());
-//        Order order = new Order (addOrderRequest.getOrderedProduct(),addOrderRequest.getPrice());
+        OrderedProducts order = new OrderedProducts (addOrderRequest.getOrderedProduct(),addOrderRequest.getPrice());
 //        order.setSeller(seller);
-//        getRepository().save(order);
-//        return order;
+        getRepository().save(order);
+        return order;
+    }
+
+//    @RequestMapping(value = "/addOrder/{orderedProduct}")
+//    public @ResponseBody
+//    boolean addOrder(@PathVariable("orderedProduct") String orderedProduct) {
+//        Iterable<OrderedProducts> orders = getRepository().findByOrderedProduct(orderedProduct);
+//        getRepository().save(orders);
+//        return true;
 //    }
 
-    @RequestMapping(value = "/addOrder/{orderedProduct}")
-    public @ResponseBody
-    boolean deleteProduct(@PathVariable("orderedProduct") String orderedProduct) {
-        Iterable<Order> orders = getRepository().findByOrderedProduct(orderedProduct);
-        getRepository().save(orders);
-        return true;
-    }
+
 
     public OrderRepository getRepository() {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);

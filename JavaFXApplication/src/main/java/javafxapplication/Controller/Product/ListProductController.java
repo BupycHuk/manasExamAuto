@@ -4,10 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafxapplication.Model.Order;
+import javafxapplication.Model.OrderedProducts;
 import javafxapplication.Model.Product;
 import javafxapplication.Proxy.OrderProxy;
 import javafxapplication.Proxy.ProductProxy;
+import javafxapplication.Model.RequestDto.AddOrderRequest;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -23,6 +24,7 @@ public class ListProductController implements Initializable {
     public TableColumn nameProduct;
     public TableColumn price;
     public TableView tableView1;
+
 
     ProductProxy productProxy = new ProductProxy();
     OrderProxy orderProxy = new OrderProxy();
@@ -51,8 +53,17 @@ public class ListProductController implements Initializable {
     }
     public void orderProduct(ActionEvent actionEvent) {
 
-        Order order =  (Order) tableView1.getSelectionModel().getSelectedItem();
-        String orderedProduct = order.getOrderedProduct();
-        orderProxy.productOrder(orderedProduct);
+        OrderedProducts order =  (OrderedProducts) tableView1.getSelectionModel().getSelectedItem();
+
+//      String orderedProduct = order.getOrderedProduct();
+//      orderProxy.productOrder(orderedProduct);
+//      Seller seller = order.getSeller();
+        String orderedProduct, price;
+//      long sellerId = (seller!=null)?(long)seller.getId() :0;
+        orderedProduct = order.getOrderedProduct();
+        price = order.getPrice();
+        AddOrderRequest request = new AddOrderRequest(orderedProduct, price);
+
+        orderProxy.addOrderedProduct(request);
     }
 }

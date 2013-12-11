@@ -37,6 +37,7 @@ public class MainController implements Initializable {
         openControl("/View/ListOrderControl.fxml");
     }
 
+
     private void openControl(String controlPath) throws IOException {
         Parent control = FXMLLoader.load(getClass().getResource(controlPath));
 

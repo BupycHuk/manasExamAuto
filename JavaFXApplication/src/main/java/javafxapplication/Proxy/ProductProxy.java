@@ -1,10 +1,8 @@
 package javafxapplication.Proxy;
 
 
-import javafxapplication.Model.Order;
 import javafxapplication.Model.Product;
 import javafxapplication.Model.RequestDto.AddProductRequest;
-import javafxapplication.Model.RequestDto.AddOrderRequest;
 
 /**
  * Created by Aza on 08.12.13.

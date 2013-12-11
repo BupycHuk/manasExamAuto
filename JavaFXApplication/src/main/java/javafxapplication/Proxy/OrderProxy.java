@@ -1,19 +1,33 @@
 package javafxapplication.Proxy;
 
-import javafxapplication.Model.Order;
-import javafxapplication.Model.Product;
+import javafxapplication.Model.OrderedProducts;
 import javafxapplication.Model.RequestDto.AddOrderRequest;
+import org.springframework.core.annotation.Order;
+
 /**
  * Created by Aza on 09.12.13.
  */
 public class OrderProxy extends Proxy{
 
-    public void productOrder(String orderedProduct){
+//    public void productOrder(String orderedProduct){
+//
+//        restTemplate.getForObject(urlService.GetServerUrl("/addOrder/"+orderedProduct), OrderedProduct[].class);
+//    }
 
-        restTemplate.getForObject(urlService.GetServerUrl("/addOrder/"+orderedProduct), Order[].class);
+    public boolean addOrderedProduct(AddOrderRequest orderAddRequest)
+    {
+        try {
+            restTemplate.postForObject(urlService.GetServerUrl("/addProduct/"), orderAddRequest, OrderedProducts.class);
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+        return true;
+
     }
 
-    public Order[] getOrders() {
-        return restTemplate.getForObject(urlService.GetServerUrl("/orders/"), Order[].class);
+    public OrderedProducts[] getOrders() {
+        return restTemplate.getForObject(urlService.GetServerUrl("/orders/"), OrderedProducts[].class);
     }
 }

@@ -16,9 +16,9 @@ public class AddOrderRequest implements Serializable{
 
     }
 
-    public AddOrderRequest(long shopId, String orderedProduct, String price) {
+    public AddOrderRequest(long sellerId, String orderedProduct, String price) {
         //To change body of created methods use File | Settings | File Templates.
-        this.sellerId = shopId;
+        this.sellerId = sellerId;
         this.orderedProduct = orderedProduct;
         this.price = price;
     }

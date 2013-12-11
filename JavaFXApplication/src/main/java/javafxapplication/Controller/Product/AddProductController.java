@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafxapplication.Model.RequestDto.AddProductRequest;
-import javafxapplication.Model.RequestDto.AddSellerRequest;
 import javafxapplication.Model.Shop;
 import javafxapplication.Proxy.ProductProxy;
 import javafxapplication.Proxy.ShopProxy;

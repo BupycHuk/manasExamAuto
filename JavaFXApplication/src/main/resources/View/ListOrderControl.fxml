@@ -13,7 +13,7 @@
             </FlowPane.margin></Button>
         <TableView fx:id="tableView1" layoutX="-65.0" layoutY="32.0" prefHeight="200.0" prefWidth="333.0">
             <columns>
-                <TableColumn fx:id="sellername" prefWidth="110.0" text="Дукондун аты" />
+                <!--<TableColumn fx:id="sellername" prefWidth="110.0" text="Сатуучунун аты" />-->
                 <TableColumn fx:id="orderedProduct" prefWidth="110.0" text="Товардын аты" />
                 <TableColumn fx:id="price" prefWidth="110.0" text="Товардын баасы" />
             </columns>
