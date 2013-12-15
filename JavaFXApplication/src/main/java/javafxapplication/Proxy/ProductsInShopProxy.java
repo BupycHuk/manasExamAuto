@@ -1,5 +1,10 @@
 package javafxapplication.Proxy;
 
+import javafxapplication.Model.ProductsInShop;
+import javafxapplication.Model.ResponseDto.ProductInShopCount;
+
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Akim
@@ -9,4 +14,7 @@ package javafxapplication.Proxy;
  */
 public class ProductsInShopProxy extends Proxy {
 
+    public ProductInShopCount[] getProductsInShopCountByShop() {
+        return restTemplate.getForObject(urlService.GetServerUrl("/productinshop/groupbyshop"),ProductInShopCount[].class);
+    }
 }
