@@ -37,14 +37,6 @@ public class ShopController {
         return shop;
     }
 
-    @RequestMapping(value = "/delete/shop/{id}")
-    public @ResponseBody
-    boolean deleteProduct(@PathVariable("id") long id) {
-
-        getRepository().delete(id);
-        return true;
-    }
-
     public ShopRepository getRepository() {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         return context.getBean(ShopRepository.class);
