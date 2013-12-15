@@ -21,9 +21,9 @@ import java.util.ResourceBundle;
 public class AddShopController implements Initializable{
 
     @FXML
-    private TextField text2;
+    private TextField text2;//TODO озгормонун аты shopNameTextField
     @FXML
-    private TextField text3;
+    private TextField text3;//TODO озгормонун аты contactsTextField
     @FXML
 
     ShopProxy shopProxy = new ShopProxy();
