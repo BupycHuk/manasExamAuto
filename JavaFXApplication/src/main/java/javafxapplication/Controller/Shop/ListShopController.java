@@ -27,7 +27,7 @@ public class ListShopController implements Initializable {
     public TableColumn<Shop, String> name;
     public TableColumn<Shop, String> contacts;
 
-    public TableView<Shop> tableView1;
+    public TableView<Shop> tableView1;//TODO: озгормонун аты shopListTableView болуш керек
 
     ShopProxy shopProxy = new ShopProxy();
 
@@ -50,7 +50,7 @@ public class ListShopController implements Initializable {
 
 
          Shop shop = tableView1.getSelectionModel().getSelectedItem();
-         long i=shop.getId();
+         long i=shop.getId();//TODO: озгормонун аты shopId болуш керек
          shopProxy.deleteShops(i);
 
 
