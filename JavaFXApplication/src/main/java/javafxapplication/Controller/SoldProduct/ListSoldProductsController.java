@@ -7,7 +7,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafxapplication.Model.CountSoldProduct;
 import javafxapplication.Model.Shop;
 import javafxapplication.Model.SoldProducts;
-import javafxapplication.Proxy.CountSoldProductProxy;
 import javafxapplication.Proxy.ShopProxy;
 import javafxapplication.Proxy.SoldProductsProxy;
 
@@ -22,13 +21,12 @@ public class ListSoldProductsController implements Initializable {
     public TableColumn price;
     public TableColumn seller;
     public ComboBox shopComboBox;
-    public TableView tableView1;
-    public Label label2;
+    public TableView tableView1;//TODO: озгормонун аты
+    public Label label2;//TODO: кереги жок озгормо
     public Label counts;
     public Label sum;
     SoldProductsProxy soldProductsProxy = new SoldProductsProxy();
     ShopProxy shopProxy = new ShopProxy();
-    CountSoldProductProxy countSoldProductProxy = new CountSoldProductProxy();
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Shop[] shops = shopProxy.getShops();
         shopComboBox.getItems().setAll(shops);
@@ -43,10 +41,10 @@ public class ListSoldProductsController implements Initializable {
     public void textToluktoo(ActionEvent actionEvent) {
         Shop shop = (Shop) shopComboBox.getValue();
         String Name = shop.getName();
-        List<SoldProducts> soldProductses = Arrays.asList(soldProductsProxy.getSoldProducts(Name));
+        List<SoldProducts> soldProductses = Arrays.asList(soldProductsProxy.getSoldProducts(Name));//TODO: Id аркылуу табыш керек болчу
         tableView1.getItems().setAll(soldProductses);
 
-        CountSoldProduct countSoldProducts = countSoldProductProxy.getCountSoldProducts(Name);
+        CountSoldProduct countSoldProducts = soldProductsProxy.getCountSoldProducts(Name);
         counts.setText(String.format("%s",countSoldProducts.getCountProduct()));
         sum.setText(String.format("%s",countSoldProducts.getSumProduct()));
 

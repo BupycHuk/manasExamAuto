@@ -14,9 +14,14 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Сатуучу кошуу" onAction="#addSeller"/>
                         <MenuItem mnemonicParsing="false" text="Сатуучулардын тизмеси" onAction="#listSeller"/>
+                    </items>
+                </Menu>
+                <Menu text="Буйумдар">
+                    <items>
                         <MenuItem mnemonicParsing="false" text="Сатылган буюмдардын тизмеси" onAction="#listSoldProducts"/>
                     </items>
                 </Menu>
+
                 <Menu text="Menu2"/>
 
             </menus>
