@@ -12,7 +12,7 @@ public class Product {
     @Column(name="price")
     private String price;
 
-    protected Product() {}
+    public Product() {}
 
     public Product(String nameProduct, String price) {
         this.nameProduct = nameProduct;

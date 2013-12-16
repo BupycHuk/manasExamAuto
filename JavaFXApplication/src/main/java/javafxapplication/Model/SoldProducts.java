@@ -56,7 +56,7 @@ public class SoldProducts {
     public String getProductName()
     {
         if (getProduct()!=null)
-            return getProduct().getName();
+            return getProduct().getNameProduct();
         return null;
     }
 

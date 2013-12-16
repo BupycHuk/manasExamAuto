@@ -2,6 +2,7 @@ package hello.Controller;
 
 import hello.Config;
 import hello.Model.*;
+import hello.Model.Repository.ShopRepository;
 import hello.Model.RequestDto.AddProductRequest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
