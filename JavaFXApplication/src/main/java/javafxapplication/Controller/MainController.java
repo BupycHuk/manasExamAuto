@@ -44,7 +44,7 @@ public class MainController implements Initializable {
        openControl("/View/ListSellerControl.fxml");
     }
 
-    public void listShop(ActionEvent event) throws IOException {
+    public void listShopTreeView(ActionEvent event) throws IOException {
         openControl("/View/TreeView.fxml");
     }
 
