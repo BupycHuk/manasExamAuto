@@ -1,10 +1,17 @@
-
 package javafxapplication.Model;
-public class Shop
-{
+
+public class Provider {
     private long id;
     private String name;
     private String contacts;
+
+    protected Provider() {}
+
+    public Provider(String firstName, String lastName) {
+        this.name = firstName;
+        this.contacts = lastName;
+    }
+
 
     public String getName() {
         return name;
@@ -14,16 +21,6 @@ public class Shop
         this.name = name;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public String toString()
-    {
-        return getId()+" - "+getName();
-
-    }
-
     public String getContacts() {
         return contacts;
     }
@@ -31,4 +28,9 @@ public class Shop
     public void setContacts(String contacts) {
         this.contacts = contacts;
     }
+
+    public long getId() {
+        return id;
+    }
 }
+

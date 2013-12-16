@@ -41,7 +41,11 @@ public class MainController implements Initializable {
     }
 
     public void listSeller(ActionEvent actionEvent) throws IOException {
-        openControl("/View/ListSellerControl.fxml");
+       openControl("/View/ListSellerControl.fxml");
+    }
+
+    public void listShop(ActionEvent event) throws IOException {
+        openControl("/View/TreeView.fxml");
     }
 
     public void MainControl() throws IOException {
