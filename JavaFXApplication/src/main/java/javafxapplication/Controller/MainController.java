@@ -10,10 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- *
- * @author Nuriza
- */
+
 public class MainController implements Initializable {
 
     public VBox vbox;
@@ -25,6 +22,12 @@ public class MainController implements Initializable {
 
     public void addSeller(ActionEvent actionEvent) throws IOException {
         openControl("/View/AddSellerControl.fxml");
+    }
+
+
+
+    public void listShop(ActionEvent actionEvent) throws IOException {
+        openControl("/View/ListShopControl.fxml");
     }
 
     private void openControl(String controlPath) throws IOException {

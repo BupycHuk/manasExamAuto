@@ -30,7 +30,7 @@ public class AddSellerController implements Initializable {
     ShopProxy shopProxy = new ShopProxy();
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void handleButtonAction(ActionEvent actionEvent) {
 
         String sellerName, login, password;
         Shop shop = (Shop)shopComboBox.getValue();
