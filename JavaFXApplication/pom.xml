@@ -60,7 +60,6 @@
                     <mainClass>javafxapplication.JavaFXApplication</mainClass>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

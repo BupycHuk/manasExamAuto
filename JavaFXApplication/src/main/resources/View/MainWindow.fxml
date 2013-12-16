@@ -22,7 +22,12 @@
           <Menu text="Буйумдар">
               <items>
                   <MenuItem mnemonicParsing="false" text="Сатылган буюмдардын тизмеси" onAction="#listSoldProducts"/>
+                  <MenuItem mnemonicParsing="false" text="Товар кошуу" onAction="#addProduct"/>
+                  <MenuItem mnemonicParsing="false" text="Товарлардын тизмеси" onAction="#listProducts"/>
               </items>
+          </Menu>
+          <Menu text="Заказдар">
+              <MenuItem mnemonicParsing="false" text="Заказдын тизмеси" onAction="#listOrders"/>
           </Menu>
       </menus>
     </MenuBar>

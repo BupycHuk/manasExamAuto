@@ -1,30 +1,62 @@
 package javafxapplication.Model;
 
-public class Product{
+/**
+ * Created by Aza on 08.12.13.
+ */
+public class Product {
+
     private long id;
-
     private String nameProduct;
+    private String price;
 
-    private Double price;
+    public String getNameProduct() {
+        return nameProduct;
+    }
 
+    public void setNameProduct(String nameProduct, String Price) {
+        this.nameProduct = nameProduct;
+        this.price = Price;
+    }
 
     public long getId() {
         return id;
     }
 
-    public String getName() {
-        return nameProduct;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.nameProduct = name;
+    public String toString()
+    {
+        return getId()+" - "+ getNameProduct();
+
     }
 
-    public Double getPrice() {
+
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
+
+    private Shop shop;
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    public String getShopname()
+    {
+        if (getShop()!=null)
+            return getShop().getName();
+        return null;
+    }
+
+
 }
