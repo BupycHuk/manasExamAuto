@@ -38,6 +38,15 @@ public class ShopController {
         return true;
     }
 
+    @RequestMapping(value = "/addShop",method = RequestMethod.POST)
+    public @ResponseBody
+    Shop addShop(@RequestBody AddShopRequest addShopRequest) {
+        AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        Shop shop= new Shop(addShopRequest.getName(),addShopRequest.getContacts());
+        getRepository().save(shop);
+        return shop;
+    }
+
     public ShopRepository getRepository() {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         return context.getBean(ShopRepository.class);

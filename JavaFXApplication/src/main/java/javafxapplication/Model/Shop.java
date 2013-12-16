@@ -8,6 +8,13 @@ public class Shop
     private long shopId;
     private String contacts;
 
+    protected Shop() {}
+
+    public Shop(String shopname, String shopcontacts) {
+        this.name = shopname;
+        this.contacts = shopcontacts;
+    }
+
     public String getName() {
         return name;
     }
