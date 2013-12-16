@@ -19,6 +19,11 @@
           <MenuItem mnemonicParsing="false" onAction="#listShop" text="Дукондордун тизмеси" />
             <MenuItem mnemonicParsing="false" onAction="#listShopTreeView" text="Дукондордун жана сатуучулардын тизмеси"></MenuItem>
         </Menu>
+          <Menu text="Буйумдар">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Сатылган буюмдардын тизмеси" onAction="#listSoldProducts"/>
+              </items>
+          </Menu>
       </menus>
     </MenuBar>
     <VBox fx:id="vbox">

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="374.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.SoldProduct.ListSoldProductsController">
+  <children>
+    <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#textToluktoo" prefHeight="27.0" prefWidth="73.0" text="Жаңылоо" />
+    <TableView fx:id="tableView1" prefHeight="200" prefWidth="333.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="41.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Буйумдун аты" fx:id="Name" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Cатылгандын саны" fx:id="count" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Буйумдун баасы" fx:id="price" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="80.0" text="Сатуучунун аты" fx:id="seller" />
+      </columns>
+    </TableView>
+    <ComboBox fx:id="shopComboBox" prefHeight="27.0" prefWidth="113.0" promptText="дукондун аты" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="11.0" />
+    <Label fx:id="label1" layoutX="41.0" layoutY="248.0" text="count =" textFill="#560099" />
+    <Label id="label2" fx:id="counts" layoutX="138.0" layoutY="251.0" prefWidth="401.0" text="" textFill="#cc00ff" visible="true" />
+    <Label layoutX="41.0" layoutY="277.0" text="sum =" textFill="#8f00ff" />
+    <Label fx:id="sum" layoutX="138.0" layoutY="280.0" prefWidth="401.0" text="" textFill="#ff00f5" />
+  </children>
+</AnchorPane>

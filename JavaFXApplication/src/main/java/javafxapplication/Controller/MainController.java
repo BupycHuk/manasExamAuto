@@ -17,7 +17,6 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     public void addSeller(ActionEvent actionEvent) throws IOException {
@@ -41,7 +40,11 @@ public class MainController implements Initializable {
     }
 
     public void listSeller(ActionEvent actionEvent) throws IOException {
-       openControl("/View/ListSellerControl.fxml");
+        openControl("/View/ListSellerControl.fxml");
+    }
+
+    public void listSoldProducts(ActionEvent actionEvent) throws IOException {
+         openControl("/View/ListSoldProductControl.fxml");
     }
 
     public void listShopTreeView(ActionEvent event) throws IOException {

@@ -38,6 +38,11 @@ public class SoldProducts {
     public Seller getSeller() {
         return seller;
     }
+    public String getFullName(){
+        if (getSeller()!=null)
+            return  getSeller().getFullName();
+        return null;
+    }
 
     private Product product;
 

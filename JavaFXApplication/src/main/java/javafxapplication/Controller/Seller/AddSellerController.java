@@ -15,10 +15,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- *
- * @author Akim
- */
+
 public class AddSellerController implements Initializable {
 
     public ComboBox shopComboBox;
@@ -47,6 +44,9 @@ public class AddSellerController implements Initializable {
         AddSellerRequest request = new AddSellerRequest(shopId, sellerName,login,password);
 
         sellerProxy.addSeller(request);
+        text2.setText("");
+        text3.setText("");
+        text4.setText("");
     }
     @FXML
     private void textTazala(ActionEvent event){

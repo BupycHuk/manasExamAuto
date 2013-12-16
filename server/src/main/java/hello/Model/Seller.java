@@ -3,7 +3,10 @@ package hello.Model;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Seller {
@@ -60,7 +63,6 @@ public class Seller {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "shop")
     private Shop shop;
 
@@ -70,6 +72,14 @@ public class Seller {
 
     public void setShop(Shop shop) {
         this.shop = shop;
+    }
+
+    @OneToMany(mappedBy = "seller")
+    @JsonIgnore
+    private Set<SoldProducts> soldProductses;
+
+    public Set<SoldProducts> getSoldProductses(){
+        return soldProductses;
     }
 }
 

@@ -7,13 +7,9 @@ public class SoldProducts {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-//    @Column(name="sellerName")
-//    private String sellerName;
-//    @Column(name="productName")
-//    private String productName;
+    protected long id;
     @Column(name="count")
-    private Integer count;
+    private int count;
     @Column(name="price")
     private Double price;
 
@@ -29,19 +25,11 @@ public class SoldProducts {
         return id;
     }
 
-//    public void setSellerName(String sellerName) {
-//        this.sellerName = sellerName;
-//    }
-//
-//    public String getSellerName() {
-//        return sellerName;
-//    }
-
-    public void setCount(Integer count) {
+    public void setCount(int count) {
         this.count = count;
     }
 
-    public Integer getCount() {
+    public int getCount() {
         return count;
     }
 
@@ -66,7 +54,7 @@ public class SoldProducts {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "productkName")
+    @JoinColumn(name = "productName")
     private Product product;
 
     public void setProduct(Product product) {
