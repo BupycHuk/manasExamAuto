@@ -11,8 +11,4 @@ import javafxapplication.Model.User;
  */
 public class UserProxy extends Proxy {
 
-    public User[] getSellers() {
-        return restTemplate.getForObject(urlService.GetServerUrl("/sellers/"), User[].class);
-    }
-
 }

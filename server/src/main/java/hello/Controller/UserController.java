@@ -19,19 +19,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Component
 @Controller
-@RequestMapping(value = "/user")
 public class UserController {
-
-    @RequestMapping(value = "/all")
-    public @ResponseBody
-    Iterable<User> listSellers() {
-
-        return  getRepository().findAll();
-    }
-
-    public UserRepository getRepository() {
-        AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        return context.getBean(UserRepository.class);
-    }
 }
 
