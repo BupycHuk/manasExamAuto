@@ -20,11 +20,6 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public void addSeller(ActionEvent actionEvent) throws IOException {
-        openControl("/View/AddSellerControl.fxml");
     }
 
     private void openControl(String controlPath) throws IOException {

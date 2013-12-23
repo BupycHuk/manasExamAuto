@@ -11,15 +11,15 @@ package javafxapplication.Model;
  * @author Akim
  */
 
-public class Seller {
+public class User {
     private long id;
     private String fullName;
     private String login;
     private String password;
 
-    protected Seller() {}
+    protected User() {}
 
-    public Seller(String firstName, String lastName, String password) {
+    public User(String firstName, String lastName, String password) {
         this.fullName = firstName;
         this.login = lastName;
         this.password = password;
@@ -56,23 +56,6 @@ public class Seller {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    private Shop shop;
-
-    public Shop getShop() {
-        return shop;
-    }
-
-    public void setShop(Shop shop) {
-        this.shop = shop;
-    }
-
-    public String getShopname()
-    {
-        if (getShop()!=null)
-            return getShop().getName();
-        return null;
     }
 }
 

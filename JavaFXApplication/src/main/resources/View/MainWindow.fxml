@@ -10,19 +10,16 @@
     <children>
         <MenuBar>
             <menus>
-                <Menu text="Сатуучулар">
+                <Menu text="Колдонуучулар">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Сатуучу кошуу" onAction="#addSeller"/>
-                        <MenuItem mnemonicParsing="false" text="Сатуучулардын тизмеси" onAction="#listSeller"/>
+                        <MenuItem mnemonicParsing="false" text="Колдонуучулардын тизмеси" onAction="#listSeller"/>
                     </items>
                 </Menu>
-                <Menu text="Menu2"/>
-
             </menus>
         </MenuBar>
         <VBox fx:id="vbox">
             <VBox.margin>
-                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
             </VBox.margin>
         </VBox>
     </children>

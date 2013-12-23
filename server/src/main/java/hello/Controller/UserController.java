@@ -2,6 +2,7 @@ package hello.Controller;
 
 import hello.Config;
 import hello.Model.*;
+import hello.Model.Repository.UserRepository;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.stereotype.Component;
@@ -18,18 +19,19 @@ import org.springframework.web.bind.annotation.*;
 
 @Component
 @Controller
-public class ShopController {
+@RequestMapping(value = "/user")
+public class UserController {
 
-    @RequestMapping(value = "/shops")
+    @RequestMapping(value = "/all")
     public @ResponseBody
-    Iterable<Shop> listSellers() {
+    Iterable<User> listSellers() {
 
         return  getRepository().findAll();
     }
 
-    public ShopRepository getRepository() {
+    public UserRepository getRepository() {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        return context.getBean(ShopRepository.class);
+        return context.getBean(UserRepository.class);
     }
 }
 

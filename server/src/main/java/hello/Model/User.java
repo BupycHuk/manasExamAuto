@@ -3,7 +3,7 @@ package hello.Model;
 import javax.persistence.*;
 
 @Entity
-public class Seller {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,9 +15,9 @@ public class Seller {
     @Column(name="password")
     private String password;
 
-    protected Seller() {}
+    protected User() {}
 
-    public Seller(String firstName, String lastName, String password) {
+    public User(String firstName, String lastName, String password) {
         this.fullName = firstName;
         this.login = lastName;
         this.password = password;
@@ -54,18 +54,6 @@ public class Seller {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "shop")
-    private Shop shop;
-
-    public Shop getShop() {
-        return shop;
-    }
-
-    public void setShop(Shop shop) {
-        this.shop = shop;
     }
 }
 
