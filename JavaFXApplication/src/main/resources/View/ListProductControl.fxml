@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<FlowPane prefHeight="597.0" prefWidth="592.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.User.ListProductController">
+  <children>
+    <AnchorPane prefHeight="597.0" prefWidth="592.0">
+      <children>
+        <Label alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="160.0" layoutY="14.0" prefHeight="27.0" prefWidth="260.0" text="Машиналардын запчасты">
+          <font>
+            <Font name="System Bold" size="20.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="1.000" green="0.000" red="0.078" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Label alignment="CENTER_LEFT" contentDisplay="LEFT" font="$x1" layoutX="70.0" layoutY="103.0" prefHeight="27.0" prefWidth="260.0" text="Запчастын туру" textFill="$x2" />
+        <ComboBox id="product" fx:id="productComboBox" layoutX="368.0" layoutY="109.0" prefHeight="21.0" prefWidth="190.0" promptText="Produkt">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Button layoutX="368.0" layoutY="165.0" mnemonicParsing="false" onAction="#textTolukta" prefWidth="88.0" text="Фильтр" />
+        <TableView layoutX="60.0" layoutY="219.0" prefHeight="319.0" prefWidth="484.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" text="Запчастьтын түрү" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Запчастьтын аты" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="88.0" text="Баасы" />
+          </columns>
+        </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</FlowPane>
