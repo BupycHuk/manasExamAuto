@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane prefHeight="500.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.Controller.Product.ListProductController">
+    <children>
+        <Button layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#update" prefHeight="27.0" prefWidth="88.0" text="Толукта">
+            <FlowPane.margin>
+                <Insets bottom="15.0" left="0" right="0" top="0" />
+            </FlowPane.margin></Button>
+        <TableView fx:id="tableView1" layoutX="-65.0" layoutY="32.0" prefHeight="200.0" prefWidth="333.0">
+            <columns>
+                <TableColumn fx:id="shopName" prefWidth="110.0" text="Дукондун аты" />
+                <TableColumn fx:id="nameProduct" prefWidth="110.0" text="Товардын аты" />
+                <TableColumn fx:id="price" prefWidth="110.0" text="Товардын баасы" />
+            </columns>
+            <FlowPane.margin>
+                <Insets right="15.0" />
+            </FlowPane.margin>
+        </TableView>
+        <Button layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="27.0" prefWidth="150.0" text="Товар очуруу">
+            <FlowPane.margin>
+                <Insets bottom="15.0" left="0" right="0" top="0" />
+            </FlowPane.margin>
+        </Button>
+        <Button layoutX="22.0" layoutY="217.0" mnemonicParsing="false" onAction="#orderProduct" prefHeight="27.0" prefWidth="100.0" text="Заказ кылуу">
+            <FlowPane.margin>
+                <Insets bottom="15.0" left="0" right="0" top="0" />
+            </FlowPane.margin>
+        </Button>
+    </children>
+</FlowPane>

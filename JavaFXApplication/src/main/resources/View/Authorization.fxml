@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="574.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.Authorization.Authorization">
+  <children>
+    <Button layoutX="346.0" layoutY="243.0" mnemonicParsing="false" onAction="#kiruu" prefHeight="27.0" prefWidth="73.0" text="Кирүү" />
+    <TextField fx:id="login" layoutX="219.0" layoutY="149.0" prefWidth="200.0"/>
+    <Label layoutX="99.0" layoutY="155.0" text="Ысымыңыз" />
+    <Label layoutX="99.0" layoutY="205.0" text="Сыр сөзүнүз" />
+    <PasswordField fx:id="password" layoutX="219.0" layoutY="196.0" prefWidth="200.0" onAction="#onEnter"/>
+    <Label fx:id="errorl" layoutX="100.0" layoutY="291.0" text="" textFill="RED" visible="true">
+      <font>
+        <Font name="System Italic" size="24.0" />
+      </font>
+    </Label>
+    <Label fx:id="error" layoutX="99.0" layoutY="305.0" prefWidth="320.0" text="" />
+  </children>
+</AnchorPane>
