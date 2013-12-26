@@ -1,6 +1,8 @@
 package javafxapplication.Proxy;
 
-import javafxapplication.Model.User;
+import javafxapplication.Model.Cars;
+import javafxapplication.Model.RequestDto.AddCarRequest;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,5 +12,6 @@ import javafxapplication.Model.User;
  * To change this template use File | Settings | File Templates.
  */
 public class UserProxy extends Proxy {
+
 
 }
