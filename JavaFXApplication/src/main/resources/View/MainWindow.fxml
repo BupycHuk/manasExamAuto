@@ -13,6 +13,7 @@
                 <Menu text="Колдонуучулар">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Колдонуучулардын тизмеси" onAction="#listSeller"/>
+                        <MenuItem mnemonicParsing="false" text="Автоунаалардын тизмесин чыгаруу жана кошуу" onAction="#listCars"/>
                     </items>
                 </Menu>
             </menus>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane prefHeight="534.0" prefWidth="441.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.Car.ListCarController">
+  <children>
+    <Button id="button" fx:id="koshuu" mnemonicParsing="false" onAction="#saktoo" prefHeight="32.0" prefWidth="102.0" text="Кошуу">
+      <FlowPane.margin>
+        <Insets bottom="20.0" left="20.0" right="10.0" top="10.0" />
+      </FlowPane.margin>
+    </Button>
+    <TextField fx:id="carName"  prefHeight="25.999900817871094" prefWidth="200.0">
+      <FlowPane.margin>
+        <Insets top="-10.0" />
+      </FlowPane.margin>
+    </TextField>
+    <TableView fx:id="tableView1" prefHeight="365.0" prefWidth="405.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Id" fx:id="Id" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="305.0" text="Автоунаанын аты" fx:id="carNameColumn" />
+      </columns>
+      <FlowPane.margin>
+        <Insets bottom="10.0" left="20.0" right="50.0" />
+      </FlowPane.margin>
+    </TableView>
+    <Label text="" fx:id="labelerror">
+      <FlowPane.margin>
+        <Insets bottom="40.0" left="50.0" right="10.0" top="10.0" />
+      </FlowPane.margin>
+    </Label>
+  </children>
+</FlowPane>
