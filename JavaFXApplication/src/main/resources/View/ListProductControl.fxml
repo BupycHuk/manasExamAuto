@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
-
+ <!--//adasdfd-->
 <FlowPane prefHeight="597.0" prefWidth="592.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication.Controller.User.ListProductController">
   <children>
     <AnchorPane prefHeight="597.0" prefWidth="592.0">
