@@ -22,6 +22,14 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 
+    public void AddCar(ActionEvent actionEvent) throws IOException{
+        openControl("/View/AddCarControl.fxml");
+    }
+
+    public void listCar(ActionEvent actionEvent) throws IOException {
+        openControl("/View/ListCarControl.fxml");
+    }
+
     private void openControl(String controlPath) throws IOException {
         Parent control = FXMLLoader.load(getClass().getResource(controlPath));
 
@@ -29,7 +37,7 @@ public class MainController implements Initializable {
         vbox.getChildren().add(control);
     }
 
-    public void listSeller(ActionEvent actionEvent) throws IOException {
-        openControl("/View/ListUserControl.fxml");
+    public void MainControl() throws IOException {
+        openControl("/View/MainWindow.fxml");
     }
 }
